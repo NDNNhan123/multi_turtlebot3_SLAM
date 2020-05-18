@@ -33,7 +33,7 @@ rosdep install --from-paths src --ignore-src -y -r \
   
  Build\
  source /opt/ros/melodic/setup.bash\
- catkin build\\
+ catkin build
  \
  
  Multi Turtlebot3 Simulation\
