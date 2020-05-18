@@ -1,7 +1,7 @@
 repositories:
   free_fleet:
     type: git
-    url: https://github.com/NDNNhan123/turtlebot3_nav_fleet.git
+    url: https://github.com/NDNNhan123/multi_turtlebot3_SLAM.git
     version: master
   cyclonedds:
     type: git
