@@ -1,0 +1,18 @@
+<launch>
+
+  <!--- Run gmappings-->
+  <include file="$(find multi_turtlebots_mapping)/launch/turtlebot3_gmapping_tb3_0.launch"/>
+
+  <include file="$(find multi_turtlebots_mapping)/launch/turtlebot3_gmapping_tb3_1.launch"/>
+
+  <include file="$(find multi_turtlebots_mapping)/launch/turtlebot3_gmapping_tb3_2.launch"/>
+
+
+  <!--include file="$(find multi_turtlebots_mapping)/launch/turtlebot3_gmapping.launch"/-->
+
+ <!---  Merge of maps-->
+  <include file="$(find multi_turtlebots_mapping)/launch/multi_map_merge.launch"/>
+
+<node name="rviz" pkg="rviz" type="rviz" args="-d $(find multi_turtlebots_mapping)/launch/rviz/multi_turtlebot3_slam.rviz" />
+
+</launch>
