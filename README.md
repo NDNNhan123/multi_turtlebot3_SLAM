@@ -39,3 +39,9 @@ rosdep install --from-paths src --ignore-src -y -r \
  Multi Turtlebot3 Simulation\
    source ~/client_ws/devel/setup.bash
    export TURTLEBOT3_MODEL=burger; roslaunch ff_examples_ros1 multi_turtlebot3_ff.launch
+   
+   
+ Run multiple goals for one robot:
+    roslaunch simple_navigation_goals gazebo_navigation_rviz.launch
+    roslaunch simple_navigation_goals movebase_seq.launch
+ 
