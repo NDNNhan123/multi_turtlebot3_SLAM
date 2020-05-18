@@ -1,5 +1,13 @@
 # turtlebot3_nav_fleet
 turtlebot3 fleet management system
+Installation Instructions
+
+Prerequisites
+
+    Ubuntu 18.04 LTS
+    ROS - Melodic
+
+
 Install all non-ROS prerequisite packages
 
 sudo apt update && sudo apt install \
@@ -12,3 +20,21 @@ sudo apt update && sudo apt install \
   
 Start a new ROS workspace, and pull in the necessary repositories
 
+  mkdir -p ~/client_ws/src
+  cd ~/client_ws
+  
+  
+Install all the dependencies through rosdep
+
+source /opt/ros/melodic/setup.bash
+rosdep install --from-paths src --ignore-src -y -r \
+  --skip-keys="rmf_fleet_msgs ament_lint_common rclpy rclcpp rosidl_default_generators ament_cmake builtin_interfaces"
+  
+ Build
+ source /opt/ros/melodic/setup.bash
+ catkin build
+ 
+ 
+ Multi Turtlebot3 Simulation
+   source ~/client_ws/devel/setup.bash
+   export TURTLEBOT3_MODEL=burger; roslaunch ff_examples_ros1 multi_turtlebot3_ff.launch
