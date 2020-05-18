@@ -22,7 +22,8 @@ Start a new ROS workspace, and pull in the necessary repositories
 
   mkdir -p ~/client_ws/src
   cd ~/client_ws
-  
+  wget https://raw.githubusercontent.com/NDNNhan123/turtlebot3_nav_fleet/master/get.repos
+  vcs import src < get.repos
   
 Install all the dependencies through rosdep
 
