@@ -44,4 +44,6 @@ rosdep install --from-paths src --ignore-src -y -r \
  Run multiple goals for one robot:\
     roslaunch simple_navigation_goals gazebo_navigation_rviz.launch\
     roslaunch simple_navigation_goals movebase_seq.launch\
- 
+ Run multirobot mapping:/
+    roslaunch multi_turtlebots_mapping multi_turtlebot3.launch
+    roslaunch multi_turtlebots_mapping multi_mapping.launch
