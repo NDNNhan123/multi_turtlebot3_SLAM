@@ -1,4 +1,4 @@
-# multi_turtlebot3_nav
+# multi_turtlebot3_SLAM
 turtlebot3 system
 Installation Instructions
 
