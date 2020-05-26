@@ -2,7 +2,7 @@
 <package format="2">
   <name>ff_rviz_plugins_ros1</name>
   <version>0.0.1</version>
-  <description>A package containing rviz plugins that works with free fleet ROS1</description>
+  <description>A package containing rviz plugins </description>
   <maintainer email="ngocnhan@todo.todo">ngocnhan</maintainer>
   <license>Apache 2.0</license>
 
