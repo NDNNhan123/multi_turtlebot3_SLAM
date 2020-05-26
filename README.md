@@ -61,3 +61,7 @@ rosdep install --from-paths src --ignore-src -y -r \
  
     roslaunch multi_turtlebots_mapping multi_turtlebot3.launch
     roslaunch multi_turtlebots_mapping multi_mapping.launch
+to control
+    ROS_NAMESPACE=tb3_0 rosrun turtlebot3_teleop turtlebot3_teleop_key
+    ROS_NAMESPACE=tb3_1 rosrun turtlebot3_teleop turtlebot3_teleop_key
+    ROS_NAMESPACE=tb3_2 rosrun turtlebot3_teleop turtlebot3_teleop_key
