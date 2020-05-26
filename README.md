@@ -1,5 +1,5 @@
-# turtlebot3_nav_fleet
-turtlebot3 fleet management system
+# turtlebot3_nav
+turtlebot3 system
 Installation Instructions
 
 Prerequisites
