@@ -2,12 +2,10 @@
 <package format="2">
   <name>free_fleet_client_ros1</name>
   <version>0.0.1</version>
-  <description>Free Fleet client ROS 1 wrapper</description>
-  <maintainer email="morgan@openrobotics.org">Morgan Quigley</maintainer>
-  <maintainer email="aaron@openrobotics.org">Aaron Chong</maintainer>
+  <description>client ROS wrapper</description>
+  <maintainer email="ngocnhan@todo.todo">ngocnhan</maintainer>
   <license>Apache 2.0</license>
-  <author email="morgan@openrobotics.org">Morgan Quigley</author>
-  <author email="aaron@openrobotics.org">Aaron Chong</author>
+
 
   <buildtool_depend>catkin</buildtool_depend>
   <depend>roscpp</depend>
