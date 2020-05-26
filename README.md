@@ -31,7 +31,7 @@ Start a new ROS workspace, and pull in the necessary repositories
 Install all the dependencies through rosdep
 ```bash
 source /opt/ros/melodic/setup.bash
-rosdep install --from-paths src --ignore-src -y -r 
+rosdep install --from-paths src --ignore-src -y -r \
   --skip-keys="rmf_fleet_msgs ament_lint_common rclpy rclcpp rosidl_default_generators ament_cmake builtin_interfaces"
 ```
  Build
