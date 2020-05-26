@@ -1,0 +1,71 @@
+<!--
+Launch file for running the multirobot simulation on gazebo
+-->
+
+<!-- Launches Kobuki Gazebo simulation in an empty world -->
+<launch>
+<env name="GAZEBO_RESOURCE_PATH" value="$(find rrt_exploration_tutorials)/launch/includes/meshes"/>
+<!-- start Gazebo with an empty world -->
+<!--include file="$(find gazebo_ros)/launch/empty_world.launch">
+<arg name="use_sim_time" value="true"/>
+<arg name="debug" value="false"/>
+<arg name="world_name" value="$(find tiago_gazebo)/worlds/small_office.world"/>
+</include-->
+
+<include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <!--arg name="world_name" value="$(find turtlebot3_gazebo)/worlds/turtlebot3_house.world"/-->
+    <arg name="world_name" value="$(find multi_turtlebots_sim)/turtlebot3_description/world/turtlebot3_house.world" />
+    <arg name="use_sim_time" value="true"/>
+    <arg name="debug" value="false"/>
+</include>  
+
+
+
+<!-- spawn robot 1-->
+<group ns="/robot_1">
+	<include file="$(find multiple_turtlebots_sim)/launch/robot.launch.xml">
+		<arg name="robot_name" value="robot_1"/>
+		<arg name="init_pose" value="-x 3 -y 1 -z 0" />
+<!--arg name="init_pose" value="-x 3.0 -y 5.0 -z 0.0"/-->
+	</include>
+
+</group>
+
+<!-- spawn robot 2-->
+<group ns="/robot_2">
+	<include file="$(find multiple_turtlebots_sim)/launch/robot.launch.xml">
+		<arg name="robot_name" value="robot_2"/>
+    		<arg name="init_pose" value="-x -4 -y 1 -z 0" />
+<!--arg name="init_pose" value="-x 3.0 -y -5.8 -z 0.0"/-->
+	</include>
+
+</group>
+
+<!-- spawn robot 3-->
+<group ns="/robot_3">
+	<include file="$(find multiple_turtlebots_sim)/launch/robot.launch.xml">
+		<arg name="robot_name" value="robot_3"/>
+      		<arg name="init_pose" value="-x 1 -y -6 -z 0" />
+		<!--arg name="init_pose" value="-x 3.0 -y 5.8 -z 0.0"/-->
+	</include>
+
+</group>
+
+
+
+<!-- transformation between robots-->
+<node pkg="tf" type="static_transform_publisher" name="robot2_to_robot1" args="-4 1 0 0 0 0 /robot_1/map /robot_2/map 20" />
+<node pkg="tf" type="static_transform_publisher" name="robot3_to_robot1" args="1 -6 0 0 0 0 /robot_1/map /robot_3/map 20" />
+
+<!-- Map megring (know inital position case)-->
+
+
+
+
+<!-- run RViz node (visualization) -->
+<node pkg="rviz" type="rviz" name="rviz" args="-d $(find multi_turtlebots_sim)/rviz/three.rviz">
+<remap from="move_base_simple/goal" to="robot_1/move_base_simple/goal"/>
+</node>
+
+
+</launch>
