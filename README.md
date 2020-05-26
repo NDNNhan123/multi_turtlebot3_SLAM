@@ -28,7 +28,7 @@ Start a new ROS workspace, and pull in the necessary repositories
   vcs import src < get.repos\
   ```
 
-Install all the dependencies through rosdep\\
+Install all the dependencies through rosdep
 ```bash
 source /opt/ros/melodic/setup.bash\
 rosdep install --from-paths src --ignore-src -y -r \
@@ -40,17 +40,17 @@ rosdep install --from-paths src --ignore-src -y -r \
  catkin build
  ```
  
- Multi Turtlebot3 Simulation\
+ Multi Turtlebot3 Simulation
  ```bash
    source ~/robotics_ws/devel/setup.bash
    export TURTLEBOT3_MODEL=burger; roslaunch ff_examples_ros1 multi_turtlebot3_ff.launch
  ```
    
- Run multiple goals for one robot:\
+ Run multiple goals for one robot:
  
     roslaunch simple_navigation_goals gazebo_navigation_rviz.launch\
     roslaunch simple_navigation_goals movebase_seq.launch\
- Run multirobot mapping:/
+ Run multirobot mapping:
  
     roslaunch multi_turtlebots_mapping multi_turtlebot3.launch
     roslaunch multi_turtlebots_mapping multi_mapping.launch
