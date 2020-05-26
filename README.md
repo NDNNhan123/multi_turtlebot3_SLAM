@@ -47,7 +47,12 @@ rosdep install --from-paths src --ignore-src -y -r \
  ```
    
  Run multiple goals for one robot:
- 
+    cd src/multi_turtlebot3_SLAM/simple_navigation_goals/scripts
+    ls
+    chmod +x move_base_seq 
+    cd ~/robotics_ws
+    
+    
     roslaunch simple_navigation_goals gazebo_navigation_rviz.launch
     roslaunch simple_navigation_goals movebase_seq.launch
  Run multirobot mapping:
