@@ -1,5 +1,5 @@
 repositories:
-  free_fleet:
+  multi_turtlebot3_SLAM:
     type: git
     url: https://github.com/NDNNhan123/multi_turtlebot3_SLAM.git
     version: master
