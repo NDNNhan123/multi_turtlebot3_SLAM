@@ -24,7 +24,7 @@ Start a new ROS workspace, and pull in the necessary repositories
 ```bash
   mkdir -p ~/robotics_ws/src
   cd ~/robotics_ws
-  wget https://raw.githubusercontent.com/NDNNhan123/turtlebot3_nav_fleet/master/get.repos
+  wget https://raw.githubusercontent.com/NDNNhan123/multi_turtlebot3_SLAM/master/get.repos
   vcs import src < get.repos
   ```
 
