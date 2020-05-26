@@ -20,8 +20,8 @@ sudo apt update && sudo apt install \
   
 Start a new ROS workspace, and pull in the necessary repositories
 \\
-  mkdir -p ~/client_ws/src\
-  cd ~/client_ws\
+  mkdir -p ~/robotics_ws/src\
+  cd ~/robotics_ws\
   wget https://raw.githubusercontent.com/NDNNhan123/turtlebot3_nav_fleet/master/get.repos\
   vcs import src < get.repos\
   
@@ -37,7 +37,7 @@ rosdep install --from-paths src --ignore-src -y -r \
  
  
  Multi Turtlebot3 Simulation\
-   source ~/client_ws/devel/setup.bash
+   source ~/robotics_ws/devel/setup.bash
    export TURTLEBOT3_MODEL=burger; roslaunch ff_examples_ros1 multi_turtlebot3_ff.launch
    
    
